@@ -24,6 +24,7 @@ namespace ConsoleUI
              * Vehicle class shall have an abstract method called DriveAbstract with no implementation.
              * Vehicle class shall have a virtual method called DriveVirtual with a base implementation.
              */
+             
 
             /* 
              * Now create 2 non-abstract classes: Car and Motorcycle, that inherit from Vehicle
@@ -40,12 +41,27 @@ namespace ConsoleUI
              * Set the properties values with object initializer syntax
              */
 
+            List<Vehicle> vehicles = new List<Vehicle>();
+
+            vehicles.Add(new Car { year = "2010", make = "Ford", model = "Mustang", HasTrunk = true });
+            vehicles.Add(new Motorcycle { year = "2005", make = "Harley-Davidson", model = "Electra Glide" });
+
+            Car car1 = new Car("1995", "Chevrolet", "Camaro");
+            vehicles.Add(car1);
+
+            Motorcycle motorcycle1 = new Motorcycle("1980", "Honda", "CB750");
+            vehicles.Add(motorcycle1);
+
             /*
              * Add the 4 vehicles to the list
              * Using a foreach loop iterate through the list and display each of the properties
              */
 
             // Call each of the drive methods for one car and one motorcycle
+            vehicles[0].DriveAbstract();
+            vehicles[0].DriveVirtual();
+            vehicles[1].DriveAbstract();
+            vehicles[1].DriveVirtual();
 
             #endregion            
             Console.ReadLine();
