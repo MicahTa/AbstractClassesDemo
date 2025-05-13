@@ -9,9 +9,9 @@ namespace ConsoleUI
 {
 public abstract class Vehicle
     {
-        public string year { get; set; } = "Unknown";
-        public string make { get; set; } = "Generic";
-        public string model { get; set; } = "Car";
+        public string Year { get; set; } = "Unknown";
+        public string Make { get; set; } = "Generic";
+        public string Model { get; set; } = "Car";
 
         public abstract void DriveAbstract();
 

@@ -10,9 +10,9 @@ public class Motorcycle : Vehicle
     public bool HasSideCart { get; set; } = false;
     public Motorcycle () {}
     public Motorcycle (string eYear, string eMake, string eModel) {
-        year = eYear;
-        make = eMake;
-        model = eModel;
+        Year = eYear;
+        Make = eMake;
+        Model = eModel;
     }
 
     public override void DriveAbstract() {

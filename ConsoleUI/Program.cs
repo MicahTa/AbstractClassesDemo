@@ -43,8 +43,8 @@ namespace ConsoleUI
 
             List<Vehicle> vehicles = new List<Vehicle>();
 
-            vehicles.Add(new Car { year = "2010", make = "Ford", model = "Mustang", HasTrunk = true });
-            vehicles.Add(new Motorcycle { year = "2005", make = "Harley-Davidson", model = "Electra Glide" });
+            vehicles.Add(new Car { Year = "2010", Make = "Ford", Model = "Mustang", HasTrunk = true });
+            vehicles.Add(new Motorcycle { Year = "2005", Make = "Harley-Davidson", Model = "Electra Glide" });
 
             Car car1 = new Car("1995", "Chevrolet", "Camaro");
             vehicles.Add(car1);
@@ -56,6 +56,11 @@ namespace ConsoleUI
              * Add the 4 vehicles to the list
              * Using a foreach loop iterate through the list and display each of the properties
              */
+            foreach (Vehicle vehicle in vehicles) {
+                Console.WriteLine($"Make: {vehicle.Make}");
+                Console.WriteLine($"Model: {vehicle.Model}");
+                Console.WriteLine($"Year: {vehicle.Year}\n");
+            }
 
             // Call each of the drive methods for one car and one motorcycle
             vehicles[0].DriveAbstract();
